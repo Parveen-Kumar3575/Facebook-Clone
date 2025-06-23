@@ -1,0 +1,155 @@
+/* ========== General Fixes ========== */
+* {
+  box-sizing: border-box;
+}
+
+/* ========== Small Devices (<640px) ========== */
+@media (max-width: 639px) {
+  .container {
+    width: 95% !important;
+    grid-template-columns: 1fr !important;
+    margin-top: 2rem !important;
+    height: auto !important;
+  }
+
+  .left,
+  .right {
+    grid-column: span 12 / span 12 !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left img {
+    width: 180px !important;
+    height: auto !important;
+    margin: auto;
+  }
+
+  .left h1 {
+    font-size: 1rem !important;
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+
+  .right {
+    padding: 1rem !important;
+  }
+
+  .right > div {
+    width: 100% !important;
+    height: auto !important;
+    padding: 1rem !important;
+  }
+
+  .right input,
+  .right button {
+    width: 100% !important;
+  }
+
+  footer {
+    padding: 1rem;
+    height: auto !important;
+  }
+
+  footer > div {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  footer p {
+    padding: 0 1rem;
+    font-size: 12px;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  footer button {
+    font-size: 12px;
+    padding: 0.2rem 0.5rem;
+  }
+
+  footer .bg-gray-400 {
+    width: 90% !important;
+    margin: 0.5rem auto;
+    height: 1px;
+  }
+}
+
+/* ========== Medium Devices (640px - 1023px) ========== */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .container {
+    width: 90% !important;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 3rem !important;
+    height: auto !important;
+  }
+
+  .left,
+  .right {
+    grid-column: span 6 / span 6;
+    align-items: center;
+  }
+
+  .left h1 {
+    font-size: 1.25rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  .right > div {
+    width: 100% !important;
+  }
+
+  footer {
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  footer > div {
+    width: 90% !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  footer .bg-gray-400 {
+    height: 1px;
+    width: 90% !important;
+    margin: 1rem auto;
+  }
+
+  footer p,
+  footer button {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+/* ========== Desktop Default Fallback ========== */
+@media (min-width: 1024px) {
+  footer {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  footer > div {
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  footer .bg-gray-400 {
+    height: 1px;
+    width: 60%;
+    margin: 1rem auto;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+}
